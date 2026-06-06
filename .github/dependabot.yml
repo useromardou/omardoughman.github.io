@@ -1,0 +1,121 @@
+# File: .github/dependabot.yml
+
+version: 2
+
+updates:
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+    open-pull-requests-limit: 10
+
+  # Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "dependencies"
+      - "docker"
+
+  # npm website dependencies
+  - package-ecosystem: "npm"
+    directory: "/website"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "dependencies"
+      - "frontend"
+
+  # Python plugins
+  - package-ecosystem: "pip"
+    directory: "/reverse-engineering/plugins"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "dependencies"
+      - "python"
+
+  # CMake / C++ dependencies via GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "ci"
+      - "automation"
+
+  # Docker Compose dependencies
+  - package-ecosystem: "docker-compose"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "docker"
+
+  # Devcontainers
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+
+    labels:
+      - "devcontainer"
+
+  # Terraform infrastructure
+  - package-ecosystem: "terraform"
+    directory: "/infrastructure"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "terraform"
+      - "infrastructure"
+
+  # NuGet packages
+  - package-ecosystem: "nuget"
+    directory: "/windows-tools"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "dotnet"
+
+  # Maven Java tooling
+  - package-ecosystem: "maven"
+    directory: "/android-tools"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "java"
+
+  # Cargo Rust modules
+  - package-ecosystem: "cargo"
+    directory: "/rust-tools"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "rust"
+
+  # Go modules
+  - package-ecosystem: "gomod"
+    directory: "/go-tools"
+    schedule:
+      interval: "weekly"
+
+    labels:
+      - "golang"
