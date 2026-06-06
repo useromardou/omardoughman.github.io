@@ -1,0 +1,6 @@
+// File: configs/debug.json
+
+{
+    "debug": true,
+    "log_level": "verbose"
+}
